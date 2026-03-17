@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Portfolio - Especialista Python</title>
+    
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">&lt;DevPython/&gt;</a>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span class="highlight1">Jaime José Cardozo Junior</span><br></h1>
+                    <h1>Desenvolvedor<br><span class="highlight">Backend Python</span></h1>
+                    <p>Especialista em Automação RPA e Bots para jogos</p>
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-secondary">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ===== NOVA SEÇÃO SOBRE COM EFEITO TERMINAL ===== -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre <span class="highlight">Mim</span></h2>
+            
+            <!-- Terminal -->
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">bash -- about-me</span>
+                </div>
+                
+                <div class="terminal-body">
+                    <!-- Linha 1 -->
+                    <p>
+                        <span class="prompt">$</span> 
+                        <span class="command">whoami</span>
+                    </p>
+                    <p class="output">Desenvolvedor Backend Python</p>
+                    
+                    <!-- Linha 2 -->
+                    <p>
+                        <span class="prompt">$</span> 
+                        <span class="command">cat experiencia.txt</span>
+                    </p>
+                    <p class="output">
+                        Especialista em automação RPA com Python,<br>
+                        Analise e melhoria contínua de processos,<br>
+                        Desenvolvimento de sistemas desktop e web com Python,<br>
+                        Análise de dados e criação de Dashboards,<br>
+                        Desenvolvimento de bots para jogos com detecção de imagem,<br>
+                        Criação de APIs REST com FastAPI.
+                      
+                    </p>
+                    
+                    <!-- Linha 3 -->
+                    <p>
+                        <span class="prompt">$</span> 
+                        <span class="command">ls -la skills/</span>
+                    </p>
+                    <p class="output">
+                        Python<br>
+                        Selenium<br>
+                        OpenCV<br>
+                        PyAutoGUI<br>
+                        FastAPI<br>
+                        Docker<br>
+                        Pandas<br>
+                        Redis
+                    </p>
+                    
+                    <!-- Linha 4 - Especializações -->
+                    <p>
+                        <span class="prompt">$</span> 
+                        <span class="command">python especializacoes.py</span>
+                    </p>
+                    <p class="output">
+                        • RPA (Robotic Process Automation)<br>
+                        • Bots para jogos (detecção de imagem)<br>
+                        • APIs REST com FastAPI<br>
+                        • Web scraping com Selenium
+                    </p>
+                    
+                    <!-- Cursor piscando -->
+                    <p>
+                        <span class="prompt">$</span> 
+                        <span class="cursor">█</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO PROJETOS ===== -->
+<section id="projetos" class="projetos">
+    <div class="container">
+        <h2 class="section-title">Meus <span class="highlight">Projetos</span></h2>
+        
+        <!-- Filtros (opcional) -->
+        <div class="projetos-filtros">
+            <button class="filtro-btn active" data-filter="all">Todos</button>
+            <button class="filtro-btn" data-filter="rpa">RPA</button>
+            <button class="filtro-btn" data-filter="games">Game Bots</button>
+            <!-- <button class="filtro-btn" data-filter="api">APIs</button> -->
+            <button class="filtro-btn" data-filter="sistemas">Sistemas</button>
+        </div>
+
+        <!-- Grid de Projetos -->
+        <div class="projetos-grid">
+            
+            <!-- PROJETO 1 - sistema web -->
+            <div class="projeto-card" data-category="sistemas">
+                <div class="projeto-img">
+                    <img src="img/ger_chamados/painel_chamados.png" alt="Sistema gerenciador de chamados" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=RPA+Bot'">
+                    <div class="projeto-overlay">
+                        <div class="projeto-links">
+                            <a href="javascript:void(0)" onclick="abrirModal('sistemas')" class="projeto-link">
+                                <span>🔗</span> Ver Projeto
+                            </a>
+                            <a href="https://github.com/JaimeCardozo2212/controle_de_chamados" class="projeto-link" target="_blank">
+                                <span>📂</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-info">
+                    <h3>Sistema Gerenciador de Chamados</h3>
+                    <p>Sistema desenvolvido para Secretaria de saúde de Joinville, para gerenciar e acompanhar os chamados recebidos na area de TI.</p>
+                    
+                    <div class="projeto-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Pandas</span>
+                    </div>
+                    
+                    <div class="projeto-stats">
+                        <div class="stat">
+                            <span>⭐</span> 88
+                        </div>
+                        <div class="stat">
+                            <span>🔄</span> 1.2k
+                        </div>
+                        <div class="stat">
+                            <span>📅</span> 2022
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- PROJETO 2 - sistema IA local -->
+            <div class="projeto-card" data-category="sistemas">
+                <div class="projeto-img">
+                    <img src="img/sis_IA/sistema_IA.png" alt="Sistema IA local" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=RPA+Bot'">
+                    <div class="projeto-overlay">
+                        <div class="projeto-links">
+                            <a href="javascript:void(0)" onclick="abrirModal('sistemasIA')" class="projeto-link">
+                                <span>🔗</span> Ver Projeto
+                            </a>
+                            <a href="https://github.com/JaimeCardozo2212?tab=repositories" class="projeto-link" target="_blank">
+                                <span>📂</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-info">
+                    <h3>Sistema IA Local</h3>
+                    <p>Sistema desenvolvido para executar modelos de inteligência artificial localmente, sem a necessidade de conexão com servidores remotos.</p>
+                    
+                    <div class="projeto-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Langchain</span>
+                        <span>ollama</span>
+                        <span>Pandas</span>
+                    </div>
+                    
+                    <div class="projeto-stats">
+                        <div class="stat">
+                            <span>⭐</span> 92
+                        </div>
+                        <div class="stat">
+                            <span>🔄</span> 1.7k
+                        </div>
+                        <div class="stat">
+                            <span>📅</span> 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJETO 3 -->
+            <div class="projeto-card" data-category="rpa">
+                <div class="projeto-img">
+                    <img src="img/obitos/obitos.png" alt="RPA Bot" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=RPA+Bot'">
+                    <div class="projeto-overlay">
+                        <div class="projeto-links">
+                            <a href="javascript:void(0)" onclick="abrirModal('obitos')" class="projeto-link">
+                                <span>🔗</span> Ver Projeto
+                            </a>
+                            <a href="https://github.com/JaimeCardozo2212/Robo_Baixa_de_obitos_ses_" class="projeto-link" target="_blank">
+                                <span>📂</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-info">
+                    <h3>Robo para baixa de obitos</h3>
+                    <p>Robo desenvolvido para automatizar o processo de identificar Ubsf referencia para dar baixa nos obitos da cidade de Joinville.</p>
+                    
+                    <div class="projeto-tech">
+                        <span>Python</span>
+                        <span>Selenium</span>
+                        <span>Pandas</span>
+                    </div>
+                    
+                    <div class="projeto-stats">
+                        <div class="stat">
+                            <span>⭐</span> 78
+                        </div>
+                        <div class="stat">
+                            <span>🔄</span> 3.4k
+                        </div>
+                        <div class="stat">
+                            <span>📅</span> 2021
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJETO 4 - robo extração -->
+            <div class="projeto-card" data-category="rpa">
+                <div class="projeto-img">
+                    <img src="img/extracao_dados/extracao.png" alt="API de Automação" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=API+REST'">
+                    <div class="projeto-overlay">
+                        <div class="projeto-links">
+                            <a href="javascript:void(0)" onclick="abrirModal('extracao')" class="projeto-link">
+                                <span>🔗</span> Ver Projeto
+                            </a>
+                            <a href="#" class="projeto-link" target="_blank">
+                                <span>📂</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-info">
+                    <h3>Extração de dados</h3>
+                    <p>Ferramenta de automação que extrai e processa dados do GLPI para classificar a urgência dos chamados, otimizando a priorização do atendimento.</p>
+                    
+                    <div class="projeto-tech">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>Selenium</span>
+                    </div>
+                    
+                    <div class="projeto-stats">
+                        <div class="stat">
+                            <span>⭐</span> 32
+                        </div>
+                        <div class="stat">
+                            <span>🔄</span> 890
+                        </div>
+                        <div class="stat">
+                            <span>📅</span> 2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJETO 4 - Web Scraping (adicional) -->
+            <div class="projeto-card" data-category="sistemas">
+                <div class="projeto-img">
+                    <img src="img/ubsf_ref/app_web.png" alt="Web Scraper Inteligente" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=Web+Scraper'">
+                    <div class="projeto-overlay">
+                        <div class="projeto-links">
+                            <a href="javascript:void(0)" onclick="abrirModal('app_web')" class="projeto-link">
+                                <span>🔗</span> Ver Projeto
+                            </a>
+                            <a href="https://github.com/JaimeCardozo2212/consulta_mapa_ubsf_referencia" class="projeto-link" target="_blank">
+                                <span>📂</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-info">
+                    <h3>Sistema web </h3>
+                    <p>App consulta de unidade de saúde Secretaria da Saúde de Joinville</p>
+                    
+                    <div class="projeto-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Selenium</span>
+                    </div>
+                    
+                    <div class="projeto-stats">
+                        <div class="stat">
+                            <span>⭐</span> 56
+                        </div>
+                        <div class="stat">
+                            <span>🔄</span> 2.1k
+                        </div>
+                        <div class="stat">
+                            <span>📅</span> 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PROJETO 6 - game bot -->
+            <div class="projeto-card" data-category="games">
+                <div class="projeto-img">
+                    <img src="img/bot_tibia/bot_interface.png" alt="Bot Tibia" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=Bot+Tibia'">
+                    <div class="projeto-overlay">
+                        <div class="projeto-links">
+                            <a href="javascript:void(0)" onclick="abrirModal('bot_tibia')" class="projeto-link">
+                                <span>🔗</span> Ver Projeto
+                            </a>
+                            <a href="https://github.com/JaimeCardozo2212/Bot_Fazer_Runa" class="projeto-link" target="_blank">
+                                <span>📂</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projeto-info">
+                    <h3>Bot Tibia</h3>
+                    <p>Bot desenvolvido para o jogo tibia, com o objetivo de automatizar tarefas repetitivas e otimizar a jogabilidade. O bot é capaz de realizar ações como caça, coleta de recursos, e interação com outros jogadores, proporcionando uma experiência mais eficiente e personalizada</p>
+                    
+                    <div class="projeto-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Selenium</span>
+                    </div>
+                    
+                    <div class="projeto-stats">
+                        <div class="stat">
+                            <span>⭐</span> 56
+                        </div>
+                        <div class="stat">
+                            <span>🔄</span> 2.1k
+                        </div>
+                        <div class="stat">
+                            <span>📅</span> 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ===== SEÇÃO HABILIDADES ===== -->
+<section id="habilidades" class="habilidades">
+    <div class="container">
+        <h2 class="section-title">Minhas <span class="highlight">Habilidades</span></h2>
+        
+        <!-- Cards de categorias -->
+        <div class="skills-categories">
+            <button class="category-btn active" data-category="all">Todas</button>
+            <button class="category-btn" data-category="backend">Backend</button>
+            <button class="category-btn" data-category="automacao">Automação/RPA</button>
+            <button class="category-btn" data-category="database">Banco de Dados</button>
+            <button class="category-btn" data-category="tools">Ferramentas</button>
+        </div>
+
+        <!-- Grid de habilidades -->
+        <div class="skills-grid">
+            
+            <!-- BACKEND -->
+            <div class="skill-card" data-category="backend">
+                <div class="skill-icon">🐍</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Python</h3>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="backend">
+                <div class="skill-icon">⚡</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>FastAPI</h3>
+                        <span class="skill-percent">45%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 45%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="backend">
+                <div class="skill-icon">🔄</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Django</h3>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AUTOMAÇÃO/RPA -->
+            <div class="skill-card" data-category="automacao">
+                <div class="skill-icon">🤖</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Selenium</h3>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="automacao">
+                <div class="skill-icon">👁️</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>OpenCV</h3>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="automacao">
+                <div class="skill-icon">🖱️</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>PyAutoGUI</h3>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="automacao">
+                <div class="skill-icon">📊</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Pandas</h3>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BANCO DE DADOS -->
+            <div class="skill-card" data-category="database">
+                <div class="skill-icon">🗄️</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>SQLite</h3>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="database">
+                <div class="skill-icon">🐘</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>PostgreSQL</h3>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="database">
+                <div class="skill-icon">🍃</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>MongoDB</h3>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="database">
+                <div class="skill-icon">📦</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Redis</h3>
+                        <span class="skill-percent">45%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 45%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FERRAMENTAS -->
+            <div class="skill-card" data-category="tools">
+                <div class="skill-icon">🐳</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Docker</h3>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="tools">
+                <div class="skill-icon">📝</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Git</h3>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="tools">
+                <div class="skill-icon">🔧</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>VS Code</h3>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-category="tools">
+                <div class="skill-icon">📈</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>Streamlit</h3>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ===== SEÇÃO CONTATO ===== -->
+<section id="contato" class="contato">
+    <div class="container">
+        <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
+        
+        <!-- Mensagem de status (para feedback do formulário) -->
+        <div id="statusMensagem" class="status-mensagem"></div>
+
+        <div class="contato-wrapper">
+            
+            <!-- COLUNA ESQUERDA - INFORMAÇÕES -->
+            <div class="contato-info">
+                <div class="terminal-contato">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">contact.py</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> <span class="command">python contato.py --info</span></p>
+                        <p class="output">
+                            <span class="var">nome</span> = "Jaime José Cardozo Junior"<br>
+                            <span class="var">cargo</span> = "Desenvolvedor Backend Python"<br>
+                            <span class="var">especialidade</span> = "Automação RPA & Bots"<br>
+                            <span class="var">disponivel</span> = True
+                        </p>
+                        
+                        <p><span class="prompt">$</span> <span class="command">cat redes_sociais.txt</span></p>
+                        <p class="output">📧 Email: jaimecardozo.junior@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Cards de contato -->
+                <div class="contato-cards">
+                    
+                    <!-- Email Card -->
+                    <div class="contato-card">
+                        <div class="card-icon">📧</div>
+                        <div class="card-info">
+                            <h3>Email</h3>
+                            <a href="mailto:jaimecardozo.junior@gmail.com" class="card-link">
+                                jaimecardozo.junior@gmail.com
+                                <span class="link-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- GitHub Card -->
+                    <div class="contato-card">
+                        <div class="card-icon">📂</div>
+                        <div class="card-info">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/JaimeCardozo2212" target="_blank" class="card-link">
+                                github.com/JaimeCardozo2212
+                                <span class="link-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- LinkedIn Card -->
+                    <div class="contato-card">
+                        <div class="card-icon">💼</div>
+                        <div class="card-info">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/jaime-cardozo-2838052a1/" target="_blank" class="card-link">
+                                linkedin.com/in/jaime-cardozo
+                                <span class="link-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Card -->
+                    <div class="contato-card">
+                        <div class="card-icon">📱</div>
+                        <div class="card-info">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/5547997037331" target="_blank" class="card-link">
+                                +55 (47) 99703-7331
+                                <span class="link-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUNA DIREITA - FORMULÁRIO -->
+            <div class="contato-form-wrapper">
+                <form id="contatoForm" class="contato-form">
+                    <h3 class="form-title">Envie uma mensagem</h3>
+                    
+                    <!-- Campo Nome -->
+                    <div class="form-group">
+                        <label for="nome" class="form-label">// Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-input" 
+                               placeholder="Seu nome" required>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <!-- Campo Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">// Email</label>
+                        <input type="email" id="email" name="email" class="form-input" 
+                               placeholder="seu@email.com" required>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <!-- Campo Assunto -->
+                    <div class="form-group">
+                        <label for="assunto" class="form-label">// Assunto</label>
+                        <input type="text" id="assunto" name="assunto" class="form-input" 
+                               placeholder="Assunto da mensagem" required>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <!-- Campo Mensagem -->
+                    <div class="form-group">
+                        <label for="mensagem" class="form-label">// Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" class="form-textarea" 
+                                  rows="5" placeholder="Digite sua mensagem..." required></textarea>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <!-- Botão de envio -->
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Enviar Mensagem</span>
+                        <span class="btn-icon">📨</span>
+                        <span class="btn-loading" style="display: none;">Enviando...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jaime Cardozo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- ===== MODAL DE PROJETOS ===== -->
+<div id="projetoModal" class="modal">
+        <div class="modal-content">
+            
+            <!-- Cabeçalho do Modal -->
+            <div class="modal-header">
+                <h2 class="modal-titulo">Título do Projeto</h2>
+                <span class="modal-fechar">&times;</span>
+            </div>
+            
+            <!-- Corpo do Modal -->
+            <div class="modal-body">
+                
+                <!-- Galeria de Imagens -->
+                <div class="modal-galeria">
+                    <div class="galeria-principal">
+                        <img id="modalImagemPrincipal" src="" alt="Projeto">
+                    </div>
+                    <div class="galeria-miniaturas" id="modalMiniaturas">
+                        <!-- Miniaturas serão inseridas via JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Informações do Projeto -->
+                <div class="modal-info">
+                    <div class="modal-descricao">
+                        <h3>Sobre o Projeto</h3>
+                        <p id="modalDescricao">Descrição detalhada do projeto...</p>
+                    </div>
+                    
+                    <div class="modal-tech">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <div class="tech-tags" id="modalTech">
+                            <!-- Tags serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="modal-features">
+                        <h3>Funcionalidades</h3>
+                        <ul id="modalFeatures">
+                            <!-- Features serão inseridas via JavaScript -->
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-links">
+                        <a href="#" target="_blank" class="modal-link" id="modalLinkGithub">
+                            <span>📂</span> Ver Código
+                        </a>
+                        <a href="#" target="_blank" class="modal-link" id="modalLinkDemo">
+                            <span>🚀</span> Demo Online
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT - AGORA NA POSIÇÃO CORRETA ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
