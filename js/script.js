@@ -75,8 +75,8 @@ const projetosData = {
             'img/sis_IA/sistema_IA.png',
 
         ],
-        github: 'https://github.com/JaimeCardozo2212/controle_de_chamados',
-        demo: 'https://github.com/JaimeCardozo2212/controle_de_chamados'
+        github: 'https://github.com/JaimeCardozo2212/IA_local',
+        demo: 'https://github.com/JaimeCardozo2212/IA_local'
     },
     'obitos': {
         titulo: 'Automation Bot RPA',
