@@ -1433,3 +1433,35 @@ body {
         font-size: 15px;
     }
 }
+/* Ajuste para seção de contato sem formulário */
+.contato .contato-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-info {
+    width: 100%;
+}
+
+/* Remove a animação de fundo que não é mais necessária */
+.contato::before {
+    content: none;
+}
+
+/* Ajusta o grid wrapper quando não tem formulário */
+.contato-wrapper {
+    grid-template-columns: 1fr !important;
+}
+
+/* Centraliza os cards de contato */
+.contato-cards {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Ajusta o terminal centralizado */
+.terminal-contato {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}

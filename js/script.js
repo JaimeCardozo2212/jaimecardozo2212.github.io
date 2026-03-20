@@ -186,54 +186,6 @@ if (categoryButtons.length > 0) {
         });
     });
 }
-// ========== FORMULÁRIO DE CONTATO ==========
-const contatoForm = document.getElementById('contatoForm');
-const statusMensagem = document.getElementById('statusMensagem');
-const btnSubmit = document.querySelector('.btn-submit');
-const btnText = document.querySelector('.btn-text');
-const btnIcon = document.querySelector('.btn-icon');
-const btnLoading = document.querySelector('.btn-loading');
-
-if (contatoForm) {
-    contatoForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Mostrar loading
-        btnText.style.display = 'none';
-        btnIcon.style.display = 'none';
-        btnLoading.style.display = 'inline-block';
-        
-        // Pegar dados do formulário
-        const formData = {
-            nome: document.getElementById('nome').value,
-            email: document.getElementById('email').value,
-            assunto: document.getElementById('assunto').value,
-            mensagem: document.getElementById('mensagem').value
-        };
-        
-        // SIMULAÇÃO DE ENVIO (SUBSTITUIR PELO SEU BACKEND)
-        try {
-            // Simular delay de rede
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Aqui você substituirá pela chamada real à sua API
-            console.log('Dados do formulário:', formData);
-            
-            // Sucesso
-            mostrarMensagem('success', '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            contatoForm.reset();
-            
-        } catch (error) {
-            // Erro
-            mostrarMensagem('error', '❌ Erro ao enviar mensagem. Tente novamente mais tarde.');
-        } finally {
-            // Esconder loading
-            btnText.style.display = 'inline-block';
-            btnIcon.style.display = 'inline-block';
-            btnLoading.style.display = 'none';
-        }
-    });
-}
 
 // Função para mostrar mensagem de status
 function mostrarMensagem(tipo, texto) {

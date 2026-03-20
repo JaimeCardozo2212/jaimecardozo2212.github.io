@@ -406,6 +406,18 @@
         <div class="skills-grid">
             
             <!-- BACKEND -->
+             <div class="skill-card" data-category="backend">
+                <div class="skill-icon">🦜</div>
+                <div class="skill-info">
+                    <div class="skill-header">
+                        <h3>LangChain</h3>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
             <div class="skill-card" data-category="backend">
                 <div class="skill-icon">🐍</div>
                 <div class="skill-info">
@@ -590,7 +602,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="skill-card" data-category="tools">
                 <div class="skill-icon">📈</div>
                 <div class="skill-info">
@@ -609,17 +620,15 @@
 </section>
 
     <!-- ===== SEÇÃO CONTATO ===== -->
+<!-- ===== SEÇÃO CONTATO SIMPLIFICADA ===== -->
 <section id="contato" class="contato">
     <div class="container">
         <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
         
-        <!-- Mensagem de status (para feedback do formulário) -->
-        <div id="statusMensagem" class="status-mensagem"></div>
-
         <div class="contato-wrapper">
             
-            <!-- COLUNA ESQUERDA - INFORMAÇÕES -->
-            <div class="contato-info">
+            <!-- INFORMAÇÕES DE CONTATO -->
+            <div class="contato-info" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
                 <div class="terminal-contato">
                     <div class="terminal-header">
                         <span class="terminal-dot red"></span>
@@ -692,52 +701,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- COLUNA DIREITA - FORMULÁRIO -->
-            <div class="contato-form-wrapper">
-                <form id="contatoForm" class="contato-form">
-                    <h3 class="form-title">Envie uma mensagem</h3>
-                    
-                    <!-- Campo Nome -->
-                    <div class="form-group">
-                        <label for="nome" class="form-label">// Nome</label>
-                        <input type="text" id="nome" name="nome" class="form-input" 
-                               placeholder="Seu nome" required>
-                        <span class="input-focus"></span>
-                    </div>
-                    
-                    <!-- Campo Email -->
-                    <div class="form-group">
-                        <label for="email" class="form-label">// Email</label>
-                        <input type="email" id="email" name="email" class="form-input" 
-                               placeholder="seu@email.com" required>
-                        <span class="input-focus"></span>
-                    </div>
-                    
-                    <!-- Campo Assunto -->
-                    <div class="form-group">
-                        <label for="assunto" class="form-label">// Assunto</label>
-                        <input type="text" id="assunto" name="assunto" class="form-input" 
-                               placeholder="Assunto da mensagem" required>
-                        <span class="input-focus"></span>
-                    </div>
-                    
-                    <!-- Campo Mensagem -->
-                    <div class="form-group">
-                        <label for="mensagem" class="form-label">// Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" class="form-textarea" 
-                                  rows="5" placeholder="Digite sua mensagem..." required></textarea>
-                        <span class="input-focus"></span>
-                    </div>
-                    
-                    <!-- Botão de envio -->
-                    <button type="submit" class="btn-submit">
-                        <span class="btn-text">Enviar Mensagem</span>
-                        <span class="btn-icon">📨</span>
-                        <span class="btn-loading" style="display: none;">Enviando...</span>
-                    </button>
-                </form>
             </div>
         </div>
     </div>
