@@ -149,7 +149,74 @@ const projetosData = {
         ],
         github: 'https://github.com/JaimeCardozo2212/Bot_Fazer_Runa',
         demo: 'https://github.com/JaimeCardozo2212/Bot_Fazer_Runa'
+    },
+    'extra_municipios': {
+        titulo: 'Automação de Dados SUS - Escala Nacional',
+        descricao: 'Uma das maiores automações RPA que desenvolvi: um robô capaz de extrair e processar dados de saúde de todos os 5.569 municípios brasileiros, totalizando mais de 120 mil registros mensais. Uma tarefa que seria impossível manualmente, mas que agora é realizada em minutos.',
+        tecnologias: ['Python', 'Selenium', 'Pandas', 'SQLite', 'Schedule', 'Logging'],
+        features: [
+            'Coleta automatizada de dados do e-Gestor',
+        'Processamento de mais de 120 mil registros por ciclo',
+        'Validação e limpeza dos dados extraídos',
+        'Consolidação em banco de dados SQLite',
+        'Agendamento automático para execução mensal',
+        'Sistema de logs para monitoramento completo',
+        'Exportação para análise em Excel/CSV'
+        ],
+        imagens: [
+            'img/extra_municipios/telaInt.png',
+            'img/extra_municipios/pastas.png',
+            'img/extra_municipios/login.png',
+        ],
+        // github: '#',
+        // demo: '#'
+    },
+    'extra_sus': {
+        titulo: 'Automação de Dados SUS - Escala Nacional',
+        descricao: '🤖 Bot de Extração de Dados - Atenção Primária à Saúde (APS) Este projeto é uma automação em Python utilizando Selenium para a extração assistida de relatórios de pagamento do portal oficial do governo. O robô navega pelos filtros de Estado e Município, acessa os detalhes de cada categoria e realiza o download automático de planilhas Excel, organizando-as em pastas específicas.',
+        tecnologias: ['Python', 'Selenium', 'Pandas'],
+        features: [
+            'Coleta automatizada de dados do e-Gestor',
+        'Processamento de mais de 120 mil registros por ciclo',
+        'Validação e limpeza dos dados extraídos',
+        'Consolidação em banco de dados SQLite',
+        'Agendamento automático para execução mensal',
+        'Sistema de logs para monitoramento completo',
+        'Exportação para análise em Excel/CSV'
+        ],
+        imagens: [
+            'img/extracao_aps/pagina_inic.png',
+            'img/extracao_aps/pagina2.png',
+            'img/extracao_aps/pagina3.png',
+            'img/extracao_aps/pagina4.png'
+        ],
+        github: 'https://github.com/JaimeCardozo2212/e-Gestor-Aten-o-Prim-ria-Sa-de.git',
+        demo: 'https://www.linkedin.com/posts/jaime-cardozo-2838052a1_python-rpa-selenium-activity-7442980796384088064-TMAp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEjpk0MBm4R7UW50G34Jc3Q0YkUclbwG3T0'
+    },
+    'n8n_1': {
+        titulo: 'Automação de Triagem de Candidatos com n8n',
+        descricao: 'Automatizar o fluxo de triagem de candidaturas com base no salário pretendido, integrando diferentes ações como envio de e-mails, cadastro em sistemas, agendamento de entrevistas e atualização de planilhas.',
+        tecnologias: ['n8n'],
+        features: [
+            '1. Trigger (Gatilho)→ O fluxo é iniciado automaticamente ao receber uma nova candidatura.',
+        'O sistema avalia o salário pretendido pelo candidato.',
+        'Enviar e-mail de "salário alto" → Comunicação automática informando que o valor pretendido está fora da faixa da empresa.',
+        'Cadastrar usuários → Registra o candidato no sistema.',
+        'Desenvolvimento de e-mail → Envia e-mail informando que a candidatura foi recebida e está em análise.',
+        'Entrevista agendadora → Cria automaticamente um evento no calendário.',
+        'Colocar link entrevista → Insere o link da reunião (Google Meet, Zoom, etc.) no convite.',
+        'Anexar ou Atualizar: planilha → Registra as informações do candidato e status em uma planilha (Excel/Google Sheets).',
+        ' Envio de notificações adicionais para equipes de desenvolvimento ou recrutadores.'
+        ],
+        imagens: [
+            'img/n8n/n8n_1.png',
+            'img/n8n/n8n_2.png',
+            'img/n8n/n8n_3.png',
+        ],
+        github: '#',
+        demo: '#'
     }
+    
 };
 // ========== FILTRO DE HABILIDADES ==========
 const categoryButtons = document.querySelectorAll('.category-btn');
@@ -213,107 +280,203 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const modalTitulo = document.querySelector('.modal-titulo');
-    const modalDescricao = document.getElementById('modalDescricao');
-    const modalTech = document.getElementById('modalTech');
-    const modalFeatures = document.getElementById('modalFeatures');
-    const modalImagemPrincipal = document.getElementById('modalImagemPrincipal');
-    const modalMiniaturas = document.getElementById('modalMiniaturas');
-    const modalLinkGithub = document.getElementById('modalLinkGithub');
-    const modalLinkDemo = document.getElementById('modalLinkDemo');
-    const modalFechar = document.querySelector('.modal-fechar');
+const modalDescricao = document.getElementById('modalDescricao');
+const modalTech = document.getElementById('modalTech');
+const modalFeatures = document.getElementById('modalFeatures');
+const modalImagemPrincipal = document.getElementById('modalImagemPrincipal');
+const modalMiniaturas = document.getElementById('modalMiniaturas');
+const modalLinkGithub = document.getElementById('modalLinkGithub');
+const modalLinkDemo = document.getElementById('modalLinkDemo');
+const modalFechar = document.querySelector('.modal-fechar');
 
-    // Função para abrir o modal (disponível globalmente)
-    window.abrirModal = function(projetoId) {
-        console.log('Abrindo modal:', projetoId); // Para debug
+// Função para abrir imagem em tela cheia
+function abrirImagemTelaCheia() {
+    if (!modalImagemPrincipal) return;
+    
+    // Verifica se já está em tela cheia
+    if (!document.fullscreenElement) {
+        // Cria um container para a imagem em tela cheia
+        const fullscreenContainer = document.createElement('div');
+        fullscreenContainer.className = 'fullscreen-image-container';
+        fullscreenContainer.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        `;
         
-        const projeto = projetosData[projetoId];
-        if (!projeto) {
-            console.log('Projeto não encontrado:', projetoId);
-            return;
-        }
+        const imgFullscreen = document.createElement('img');
+        imgFullscreen.src = modalImagemPrincipal.src;
+        imgFullscreen.style.cssText = `
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        `;
         
-        // Preencher informações
-        if (modalTitulo) modalTitulo.textContent = projeto.titulo;
-        if (modalDescricao) modalDescricao.textContent = projeto.descricao;
+        const closeButton = document.createElement('button');
+        closeButton.innerHTML = '✕';
+        closeButton.style.cssText = `
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        `;
+        closeButton.onmouseover = () => closeButton.style.background = 'rgba(255,255,255,0.3)';
+        closeButton.onmouseout = () => closeButton.style.background = 'rgba(255,255,255,0.2)';
         
-        // Tecnologias
-        if (modalTech) {
-            modalTech.innerHTML = projeto.tecnologias.map(tech => 
-                `<span>${tech}</span>`
-            ).join('');
-        }
+        fullscreenContainer.appendChild(imgFullscreen);
+        fullscreenContainer.appendChild(closeButton);
         
-        // Features
-        if (modalFeatures) {
-            modalFeatures.innerHTML = projeto.features.map(feature => 
-                `<li>${feature}</li>`
-            ).join('');
-        }
+        // Fechar ao clicar no container ou no botão
+        fullscreenContainer.onclick = (e) => {
+            if (e.target === fullscreenContainer || e.target === closeButton) {
+                fullscreenContainer.remove();
+            }
+        };
         
-        // Links
-        if (modalLinkGithub) modalLinkGithub.href = projeto.github;
-        if (modalLinkDemo) modalLinkDemo.href = projeto.demo;
+        // Fechar com ESC
+        const escHandler = (e) => {
+            if (e.key === 'Escape') {
+                fullscreenContainer.remove();
+                document.removeEventListener('keydown', escHandler);
+            }
+        };
+        document.addEventListener('keydown', escHandler);
         
-        // Imagens
-        if (projeto.imagens && projeto.imagens.length > 0 && modalImagemPrincipal && modalMiniaturas) {
-            modalImagemPrincipal.src = projeto.imagens[0];
-            
-            modalMiniaturas.innerHTML = projeto.imagens.map((img, index) => `
-                <div class="miniatura ${index === 0 ? 'active' : ''}" onclick="trocarImagem(this, '${img}')">
-                    <img src="${img}" alt="Miniatura ${index + 1}" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=Imagem+${index+1}'">
-                </div>
-            `).join('');
-        }
+        document.body.appendChild(fullscreenContainer);
+        document.body.style.overflow = 'hidden';
         
-        // Mostrar modal
-        if (modal) {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-    };
-
-    // Função para trocar imagem principal
-    window.trocarImagem = function(elemento, imagemSrc) {
-        if (!modalImagemPrincipal) return;
-        
-        // Atualizar imagem principal
-        modalImagemPrincipal.src = imagemSrc;
-        
-        // Remover active de todas miniaturas
-        document.querySelectorAll('.miniatura').forEach(min => {
-            min.classList.remove('active');
-        });
-        
-        // Adicionar active na miniatura clicada
-        if (elemento) elemento.classList.add('active');
-    };
-
-    // Função para fechar modal
-    function fecharModal() {
-        if (modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    // Event listeners (só se os elementos existirem)
-    if (modalFechar) {
-        modalFechar.addEventListener('click', fecharModal);
-    }
-
-    // Fechar ao clicar fora do modal
-    if (modal) {
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                fecharModal();
+        // Remover ao fechar
+        const observer = new MutationObserver(() => {
+            if (!document.body.contains(fullscreenContainer)) {
+                document.body.style.overflow = '';
+                observer.disconnect();
             }
         });
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+    } else {
+        // Se já estiver em tela cheia, sai
+        document.exitFullscreen();
     }
+}
 
-    // Fechar com tecla ESC
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal && modal.style.display === 'block') {
+// Função para abrir o modal (disponível globalmente)
+window.abrirModal = function(projetoId) {
+    console.log('Abrindo modal:', projetoId);
+    
+    const projeto = projetosData[projetoId];
+    if (!projeto) {
+        console.log('Projeto não encontrado:', projetoId);
+        return;
+    }
+    
+    // Preencher informações
+    if (modalTitulo) modalTitulo.textContent = projeto.titulo;
+    if (modalDescricao) modalDescricao.textContent = projeto.descricao;
+    
+    // Tecnologias
+    if (modalTech) {
+        modalTech.innerHTML = projeto.tecnologias.map(tech => 
+            `<span>${tech}</span>`
+        ).join('');
+    }
+    
+    // Features
+    if (modalFeatures) {
+        modalFeatures.innerHTML = projeto.features.map(feature => 
+            `<li>${feature}</li>`
+        ).join('');
+    }
+    
+    // Links
+    if (modalLinkGithub) modalLinkGithub.href = projeto.github;
+    if (modalLinkDemo) modalLinkDemo.href = projeto.demo;
+    
+    // Imagens
+    if (projeto.imagens && projeto.imagens.length > 0 && modalImagemPrincipal && modalMiniaturas) {
+        modalImagemPrincipal.src = projeto.imagens[0];
+        
+        // Adiciona cursor pointer e evento de clique na imagem principal
+        modalImagemPrincipal.style.cursor = 'pointer';
+        modalImagemPrincipal.style.transition = 'transform 0.2s';
+        
+        // Remove evento anterior para evitar duplicação
+        modalImagemPrincipal.removeEventListener('click', abrirImagemTelaCheia);
+        modalImagemPrincipal.addEventListener('click', abrirImagemTelaCheia);
+        
+        modalMiniaturas.innerHTML = projeto.imagens.map((img, index) => `
+            <div class="miniatura ${index === 0 ? 'active' : ''}" onclick="trocarImagem(this, '${img}')">
+                <img src="${img}" alt="Miniatura ${index + 1}" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/00ff88?text=Imagem+${index+1}'">
+            </div>
+        `).join('');
+    }
+    
+    // Mostrar modal
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+// Função para trocar imagem principal
+window.trocarImagem = function(elemento, imagemSrc) {
+    if (!modalImagemPrincipal) return;
+    
+    // Atualizar imagem principal
+    modalImagemPrincipal.src = imagemSrc;
+    
+    // Remover active de todas miniaturas
+    document.querySelectorAll('.miniatura').forEach(min => {
+        min.classList.remove('active');
+    });
+    
+    // Adicionar active na miniatura clicada
+    if (elemento) elemento.classList.add('active');
+};
+
+// Função para fechar modal
+function fecharModal() {
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Event listeners (só se os elementos existirem)
+if (modalFechar) {
+    modalFechar.addEventListener('click', fecharModal);
+}
+
+// Fechar ao clicar fora do modal
+if (modal) {
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
             fecharModal();
         }
     });
+}
+
+// Fechar com tecla ESC
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal && modal.style.display === 'block') {
+        fecharModal();
+    }
 });
+    });
